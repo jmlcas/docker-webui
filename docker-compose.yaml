@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+
+    docker-webui:
+        image: macgyverbass/docker-webui
+        container_name: docker-webui
+        restart: unless-stopped
+        ports:
+            - "8900:9000"   
+        stdin_open: true
+        tty: true
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+
+ 
